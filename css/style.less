@@ -1,0 +1,239 @@
+/* variables */
+@mainTheme: white;
+
+/* Mixins */
+.border {
+  border: 1px solid white;
+}
+
+/* animations */
+// @keyframes animatedBackground {
+// 	0% { background-position: 0 0; }
+// 	100% { background-position: -300px 0; }
+// }
+// @-moz-keyframes animatedBackground {
+// 	0% { background-position: 0 0; }
+// 	100% { background-position: -300px 0; }
+// }
+// @-webkit-keyframes animatedBackground {
+// 	0% { background-position: 0 0; }
+// 	100% { background-position: -300px 0; }
+// }
+// @-ms-keyframes animatedBackground {
+// 	0% { background-position: 0 0; }
+// 	100% { background-position: -300px 0; }
+// }
+// @-o-keyframes animatedBackground {
+// 	0% { background-position: 0 0; }
+// 	100% { background-position: -300px 0; }
+// }
+
+/* Styling */
+body {
+  color: @mainTheme;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  background-color: black;
+}
+
+#gameWindow{
+  width : 1280px;
+	height : 720px;
+  position:relative;
+  margin-right:auto;
+  margin-left:auto;
+  overflow:hidden;
+}
+
+#introScreen{
+  width:1280px;
+  height:720px;
+  margin: 0 auto;
+  .border;
+  background-image: url(../images/williamsonIntro.jpg);
+  // z-index: 10;
+}
+
+#btnStart{
+position:relative;
+left: 900px;
+top: 400px;
+width:250px;
+}
+
+h1{
+  color:white;
+  cursor:pointer;
+}
+
+#town, #player, #enemy1 {
+  position:absolute;
+}
+#enemy1 {
+  .border;
+}
+
+#dialogue {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(102, 34, 0, 0.8);
+  top: 50px;
+  left: 820px;
+  font-size: 25px;
+  padding: 20px 10px 0px 20px;
+}
+
+
+
+//testing purposes
+// #player {
+//   .border;
+// }
+
+
+//Flips image to the left
+.faceLeft {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+#map {
+  position: absolute;
+  top: 60px;
+  left: 220px;
+  width: 800px;
+  height:600px;
+  background-color: blue;
+  color:black;
+  display:none;
+}
+
+
+#status {
+  width: 1280px;
+  height: 150px;
+  margin: 0 auto;
+  border: .border;
+  background-color: black;
+  position:relative;
+}
+
+.output {
+  width: 300px;
+  .border;
+  height: 50px;
+  position:absolute;
+  top: 50px;
+  left: 950px;
+}
+
+/* Health */
+#healthBox {
+  position: absolute;
+  .border;
+  top: 20px;
+  left: 20px;
+  width: 300px;
+  overflow:hidden;
+}
+
+#healthBox p {
+  margin:0;
+  padding:0;
+}
+
+#healthbar {
+  .border;
+  position: relative
+  width: 250px;
+  height: 20px;
+  top:5px;
+  left:5px;
+  background-color: #ccc;
+  overflow:hidden;
+}
+
+#currenthealth {
+  background-color: red;
+  position: absolute;
+  height:20px;
+  width:300px;
+  left:-80px;
+}
+
+/* Magic start */
+#magicBox {
+  position: absolute;
+  .border;
+  top: 80px;
+  left:20px;
+  width: 300px;
+  overflow: hidden;
+}
+
+#magicBox p {
+  margin:0;
+  padding:0;
+}
+
+#magicbar {
+  .border;
+  position: relative
+  width: 250px;
+  height: 20px;
+  top:5px;
+  left:5px;
+  background-color: #ccc;
+  overflow:hidden;
+}
+
+#currentmagic {
+  background-color: red;
+  position: absolute;
+  height:20px;
+  width:300px;
+  left:-80px;
+}
+
+
+
+/* Sword start */
+#primaryWeapon {
+  position: absolute;
+  .border;
+  top: 20px;
+  left: 350px;
+}
+
+#secondaryWeapon {
+  position: absolute;
+  .border;
+  top: 20px;
+  left: 500px;
+}
+
+#objective {
+  position: absolute;
+  .border;
+  top:20px;
+  left:800px;
+}
+
+
+//Using javascript instead
+// .mapMoveDown {
+//   animation: animatedBackground 2s linear 1;
+// 	-moz-animation: animatedBackground 2s linear 1;
+// 	-webkit-animation: animatedBackground 2s linear 1;
+// 	-ms-animation: animatedBackground 2s linear 1;
+// 	-o-animation: animatedBackground 2s linear 1;
+// }
